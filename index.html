@@ -28,22 +28,30 @@
       #hover-menu {
         border: 1px solid black;
         padding: 8px 16px;
-        overflow: hidden;
         width: fit-content;
-        height: 24px;
+      }
+
+      #hover-menu>label {
+        background: none;
+        border: 0;
+        position: relative;
       }
 
       #menu-content {
         position: relative;
         margin-top: 16px;
+        display: none;
       }
 
-      #hover-menu:hover {
-        border: 1px solid black;
-        padding: 8px 16px;
-        overflow: visible;
-        width: fit-content;
-        height: initial;
+      #hover-menu>input {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        visibility: hidden;
+      }
+
+      #hover-menu>input:checked+#menu-content {
+        display: block
       }
 
       .sub-menu {
@@ -77,8 +85,10 @@
   </head>
 
   <body>
+
     <div id="hover-menu">
-      MENU
+      <label for="menu-opener">MENU</label>
+      <input type="checkbox" name="menu-opener" id="menu-opener">
       <div id="menu-content">
         <ul>
           <li class="top-level-item"><a href="#">Item 1</a>
