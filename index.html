@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      li {
+        list-style: none;
+        display: block;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      #hover-menu {
+        border: 1px solid black;
+        padding: 8px 16px;
+        overflow: hidden;
+        width: fit-content;
+        height: 24px;
+      }
+
+      #menu-content {
+        position: relative;
+        margin-top: 16px;
+      }
+
+      #hover-menu:hover {
+        border: 1px solid black;
+        padding: 8px 16px;
+        overflow: visible;
+        width: fit-content;
+        height: initial;
+      }
+
+      .sub-menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 40px;
+      }
+
+      .top-level-item {
+        /* border: 1px solid red; */
+        display: flex;
+        height: 16px;
+      }
+
+      .top-level-item:hover {
+        /* border: 3px solid blue; */
+        width: 150px;
+      }
+
+      .top-level-item:hover>.sub-menu {
+        display: block;
+        margin-left: 20px;
+      }
+
+      .subitem:hover {
+        background-color: black;
+        color: white
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="hover-menu">
+      MENU
+      <div id="menu-content">
+        <ul>
+          <li class="top-level-item"><a href="#">Item 1</a>
+            <ul class="sub-menu">
+              <li class="subitem">Subitem 1</li>
+              <li class="subitem">Subitem 1</li>
+              <li class="subitem">Subitem 1</li>
+              <li class="subitem">Subitem 1</li>
+              <li class="subitem">Subitem 1</li>
+            </ul>
+          </li>
+          <li class="top-level-item"><a href="#">Item 2</a>
+            <ul class="sub-menu">
+              <li class="subitem">Subitem 2</li>
+              <li class="subitem">Subitem 2</li>
+              <li class="subitem">Subitem 2</li>
+              <li class="subitem">Subitem 2</li>
+              <li class="subitem">Subitem 2</li>
+            </ul>
+          </li>
+          <li class="top-level-item"><a href="#">Item 3</a>
+            <ul class="sub-menu">
+              <li class="subitem">Subitem 3</li>
+              <li class="subitem">Subitem 3</li>
+              <li class="subitem">Subitem 3</li>
+              <li class="subitem">Subitem 3</li>
+              <li class="subitem">Subitem 3</li>
+            </ul>
+          </li>
+          <li class="top-level-item"><a href="#">Item 4</a>
+            <ul class="sub-menu">
+              <li class="subitem">Subitem 4</li>
+              <li class="subitem">Subitem 4</li>
+              <li class="subitem">Subitem 4</li>
+              <li class="subitem">Subitem 4</li>
+              <li class="subitem">Subitem 4</li>
+            </ul>
+          </li>
+          <li class="top-level-item"><a href="#">Item 5</a>
+            <ul class="sub-menu">
+              <li class="subitem">Subitem 5</li>
+              <li class="subitem">Subitem 5</li>
+              <li class="subitem">Subitem 5</li>
+              <li class="subitem">Subitem 5</li>
+              <li class="subitem">Subitem 5</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+</html>
